@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Anniversary MEHEK</title>
+<style>
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#ffd1e8,#ffb6d5);
+margin:0;
+color:#c2185b;
+padding:15px;
+}
+.container{width:95%;max-width:800px;background:rgba(255,255,255,.3);padding:15px;border-radius:20px;text-align:center}
+.page{display:none}.active{display:block}
+input{padding:10px;border-radius:20px;border:none;width:180px;text-align:center}
+button{background:#ff5fa2;color:white;border:none;border-radius:10px;padding:8px 12px;margin:3px}
+.keyboard button{width:24px;height:24px;padding:0;font-size:10px}
+img.photo{max-width:220px;width:80%;border-radius:12px;margin:8px}
+.letter{background:rgba(255,255,255,.4);padding:12px;border-radius:12px}
+h1{
+margin-top:10px;
+margin-bottom:10px;
+color:#c2185b;
+}
+
+.photo{
+display:block;
+margin:15px auto;
+max-width:220px;
+width:80%;
+border-radius:12px;
+}
+</style>
+</head>
+<audio id="loveSong" src="song.mp3"></audio>
+<body>
+<div class="container">
+
+<div id="page1" class="page active">
+<h1> Welcome ❤️</h1>
+<p>Hint: the password is the name of the person I loved the most </p>
+<input type="password" id="pass" readonly><br><br>
+<div class="keyboard">
+<div>
+<button onclick="addLetter('q')">Q</button><button onclick="addLetter('w')">W</button><button onclick="addLetter('e')">E</button><button onclick="addLetter('r')">R</button><button onclick="addLetter('t')">T</button><button onclick="addLetter('y')">Y</button><button onclick="addLetter('u')">U</button><button onclick="addLetter('i')">I</button><button onclick="addLetter('o')">O</button><button onclick="addLetter('p')">P</button>
+</div>
+<div>
+<button onclick="addLetter('a')">A</button><button onclick="addLetter('s')">S</button><button onclick="addLetter('d')">D</button><button onclick="addLetter('f')">F</button><button onclick="addLetter('g')">G</button><button onclick="addLetter('h')">H</button><button onclick="addLetter('j')">J</button><button onclick="addLetter('k')">K</button><button onclick="addLetter('l')">L</button>
+</div>
+<div>
+<button onclick="addLetter('z')">Z</button><button onclick="addLetter('x')">X</button><button onclick="addLetter('c')">C</button><button onclick="addLetter('v')">V</button><button onclick="addLetter('b')">B</button><button onclick="addLetter('n')">N</button><button onclick="addLetter('m')">M</button><button onclick="clearPass()">⌫</button>
+</div>
+</div>
+<br><button onclick="checkPass()">Unlock тo view next page</button>
+</div>
+
+<div id="page2" class="page">
+<h1> Happy Anniversary Meri Mehek</h1>
+<p>Kaash Tumhe Ye Pata Chale Ki Maine Sach Mai Saccha Wala Pyaar Kiya Tumse </p>
+<button onclick="showPage('page3')">Next </button>
+</div>
+
+<div id="page3" class="page">
+<h1> I Couldn't Wrap This...</h1>
+<p>So I Made It For You</p>
+<button onclick="showPage('thing1')">Thing 1 </button>
+<button onclick="showPage('thing2')">Thing 2 </button><br><br>
+<button onclick="showPage('page4')">Next </button>
+</div>
+
+<div id="thing1" class="page">
+
+<h1 style="margin-bottom:15px;">
+🌷 Some Of My Favourite Photos ❤️
+</h1>
+
+<p style="margin-bottom:15px;">
+These are some of my favourite photos of you ❤️
+</p>
+
+<img src="photo2.jpg" class="photo">
+<img src="photo3.jpg" class="photo">
+
+<br>
+
+<button onclick="showPage('page3')">
+⬅ Back
+</button>
+
+</div>
+
+<div id="thing2" class="page">
+<h1>A Letter For You </h1>
+<div class="letter">
+Mehek,<br><br>
+Thank you for every smile caused to me. every memory and every moment <br><br>
+You became a beautiful part of my life.<br><br>
+No matter what happens, a part of my heart will always care about you and will love you. sirf yaar hurt mat karte jaa meko usdin ke  jaisa<br><br>
+mehek i hope future mai apne liye koi aur problem naa ho. and tu matlabi banna chod de 🙂<br><br>
+isbaar itna nahi likhra kyuki time nahi hai merepe and upload karne bohot time lag sakta isiliye sirf itna he likhne wala <br><br>
+and btw merepe ab zayaf photos bhi nahi bache kyuki Mera phone format kardiya tha. ab bas kuch gine chune photos he bache hai merepe <br><br>
+and sorry jo maine kiya vo gifts ke sath🙂. kyuki tune sab taraf se dead end kar diya tha. ek to mere dimaag mai vo 18 feb vaali baat Continuously mere dimaag mai baar baar firr raha tha. usdin tu meko condition samjha bhi sakti thi. kya pata condition explain karne se kam se kam mera dimaag to thik rehta yaar 🙂 <br><br>
+</div><br>
+<button onclick="showPage('page3')"> Back</button>
+</div>
+
+<div id="page4" class="page">
+
+<h1>Meri Sabkuch ❤️</h1>
+
+<video
+controls
+playsinline
+style="
+height:420px;
+width:auto;
+max-width:100%;
+border-radius:15px;
+margin:10px auto;
+display:block;
+">
+
+<source src="video.mp4" type="video/mp4">
+
+</video>
+
+<p>Yeh Wali Mehek... Meri Favorite Hai ❤️</p>
+<p> btw itna darna nahi chahiye tha 🤣</p>
+<button onclick="showPage('page5')">Next ❤️</button>
+
+</div>
+
+<div id="page5" class="page">
+<h1>One Last Thing </h1>
+<div class="letter">
+Don't forget me.<br><br>
+And keep loving me... <br><br>
+I like when you love me 
+</div>
+</div>
+
+</div>
+
+<script>
+let songPlayed = false;
+
+function addLetter(l){
+
+document.getElementById('pass').value += l;
+
+if(l === 'm' && !songPlayed){
+
+const song = document.getElementById('loveSong');
+
+song.play();
+
+songPlayed = true;
+
+}
+
+}
+function clearPass(){let p=document.getElementById('pass');p.value=p.value.slice(0,-1);}
+function showPage(id){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');}
+function checkPass(){if(document.getElementById('pass').value.toLowerCase()==='mehek'){showPage('page2');}else{alert('Wrong Password Try Again');}}
+</script>
+</body>
+</html>
